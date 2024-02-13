@@ -2,9 +2,6 @@ const config = require('./osmium-config.json')
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-  experimental: {
-    appDir: true,
-  },
   basePath: config.path,
   images: {
     domains: ['gravatar.com'],

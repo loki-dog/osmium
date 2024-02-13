@@ -17,6 +17,7 @@ import destr from 'destr'
 
 import NotionDatabase from '../lib/server/notion-api/notion-database'
 import NotionPage from '../lib/server/notion-api/notion-page'
+import { any } from 'prop-types'
 
 const ROOT = process.cwd()
 const CACHE_FILE = resolve(ROOT, 'osmium-cache.json')
@@ -118,7 +119,7 @@ async function prepareConfig (raw: string = '', extra: Extra) {
 const PACKAGE_FILE = resolve(ROOT, 'package.json')
 
 async function prepareVersion (): Promise<string | undefined> {
-  const pkg = destr(fs.readFileSync(PACKAGE_FILE, 'utf-8'))
+  const pkg : any = destr(fs.readFileSync(PACKAGE_FILE, 'utf-8'));
   if (!pkg.version) return
   if (/^\d+\.\d+\.\d+/.test(pkg.version)) return pkg.version
 
