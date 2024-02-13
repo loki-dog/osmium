@@ -6,7 +6,10 @@ import LayoutHead from './head'
 import Header from './header'
 import Footer from './footer'
 
-export default function BlogLayout ({ children }: { children: ReactNode }) {
+const BlogLayout = ({ children }: { children: ReactNode }) => {
+//  console.log(' WORKING NOW....');
+//  return <><div><h1>Test</h1></div></>;
+  
   const { current: post } = useData()
 
   return <>
@@ -23,3 +26,4 @@ export default function BlogLayout ({ children }: { children: ReactNode }) {
     </div>
   </>
 }
+export default BlogLayout;

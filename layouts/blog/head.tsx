@@ -3,13 +3,15 @@ import { joinURL } from 'ufo'
 
 import type { PageMeta } from '@/lib/server/page'
 import { execTemplate } from '@/lib/utils'
-import { useConfig } from '@/contexts/config'
+import { useConfig }  from '@/contexts/config'
 
 type Props = {
   post?: PageMeta
 }
 
 export default function LayoutHead ({ post = {} as PageMeta }: Props) {
+
+
   const config = useConfig()
 
   const title = post.title || config.title
