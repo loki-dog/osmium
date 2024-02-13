@@ -25,7 +25,7 @@ export async function getStaticProps ({ params: { tag } }: { params: Record<stri
       posts: posts.filter(post => post.tags?.includes(tag)),
       activeTag: tag,
     },
-    revalidate: 1,
+   // revalidate: 1,
   }
 }
 

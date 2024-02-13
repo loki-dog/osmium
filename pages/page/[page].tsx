@@ -37,7 +37,7 @@ export async function getStaticProps ({ params: { page } }: { params: Record<str
 
   return {
     props: { posts, pageNum, showNext },
-    revalidate: 1,
+    //revalidate: 1,
   }
 }
 

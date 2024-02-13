@@ -12,7 +12,7 @@ export async function getStaticProps () {
       tags: db.tagStats,
       posts: [...db.posts.values()].map(post => post.json()),
     },
-    revalidate: 1,
+   // revalidate: 1,
   }
 }
 

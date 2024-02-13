@@ -20,7 +20,7 @@ export async function getStaticProps () {
         post: db.index.json(),
         recordMap,
       },
-      revalidate: 1,
+      //revalidate: 1,
     }
   } else {
     return {
@@ -28,7 +28,7 @@ export async function getStaticProps () {
         posts: [...db.posts.values()].slice(0, config.postsPerPage).map(post => post.json()),
         total: db.posts.size,
       },
-      revalidate: 1,
+      //revalidate: 1,
     }
   }
 }

@@ -64,7 +64,7 @@ export const getStaticProps = async ({ params: { slug } }: { params: Params }) =
       post: post.json(),
       recordMap,
     },
-    revalidate: 1,
+//    revalidate: 1,
   }
 }
 
