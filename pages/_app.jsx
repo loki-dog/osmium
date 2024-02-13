@@ -10,8 +10,11 @@ import { SensorProvider } from '@/contexts/sensor'
 import { ThemeProvider } from '@/contexts/theme'
 import { DataProvider } from '@/contexts/data'
 import { LayoutProvider } from '@/contexts/layout'
-import Analytics from '@/components/analytics'
+//import Analytics from '@/components/analytics'
 import UserStyle from '@/components/user-style'
+import dynamic from 'next/dynamic'
+
+const Analytics = dynamic(()=>import('@/components/analytics'))
 
 const PROD = process.env.NODE_ENV === 'production'
 

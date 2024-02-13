@@ -5,7 +5,7 @@ import { getTextContent } from 'notion-utils'
 
 export default function Mermaid ({ block }) {
   const { scheme } = useTheme()
-
+/*
   useEffect(() => {
     mermaid.initialize({ theme: scheme === 'dark' ? 'dark' : 'neutral' })
   }, [scheme])
@@ -18,6 +18,7 @@ export default function Mermaid ({ block }) {
     mermaid.render(`mermaid-${block.id}`, source, container.current)
       .then(({ svg }) => setSVG(svg))
   }, [block, source])
+  */
 
   return (
     <div

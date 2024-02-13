@@ -2,7 +2,8 @@ import fs from 'node:fs'
 import { resolve } from 'node:path'
 import { createDefu } from 'defu'
 import { joinURL } from 'ufo'
-import { omit } from 'lodash'
+//import { omit } from 'lodash'
+import omit from 'lodash/omit'
 
 import { md5 } from './utils'
 

@@ -1,6 +1,7 @@
 'use client'
 
-import { get } from 'lodash'
+//import { get } from 'lodash'
+import  get  from 'lodash/get'
 
 import css from './page.module.scss'
 import type { Schema, SchemaEntryData } from './assets/config-schema'

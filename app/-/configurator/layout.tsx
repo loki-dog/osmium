@@ -14,7 +14,10 @@ import css from './layout.module.scss'
 import { ConfiguratorProvider } from './configurator.context'
 import { LocaleProvider } from './locale.context'
 import GenerateButton from './generate-button'
-import Debugger from './debugger'
+import dynamic from 'next/dynamic'
+//import Debugger from './debugger'
+
+const Debugger = dynamic(()=>import('./debugger'))
 
 const DEV = process.env.NODE_ENV === 'development'
 

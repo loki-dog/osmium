@@ -1,7 +1,12 @@
 const config = require('./osmium-config.json')
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+module.exports = withBundleAnalyzer({
   basePath: config.path,
   images: {
     domains: ['gravatar.com'],
@@ -49,4 +54,4 @@ module.exports = {
     return config
   },
   transpilePackages: ['dayjs'],
-}
+})

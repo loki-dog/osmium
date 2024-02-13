@@ -1,7 +1,8 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
-import { get } from 'lodash'
+//import { get } from 'lodash'
+import  get  from 'lodash/get'
 
 import { loadLocale } from './assets/i18n'
 

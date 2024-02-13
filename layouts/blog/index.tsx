@@ -1,7 +1,10 @@
 import type { PageMeta } from '@/lib/server/page'
 import { useConfig } from '@/contexts/config'
 import PostList from '@/components/PostList'
-import Pagination from '@/components/pagination'
+//import Pagination from '@/components/pagination'
+import dynamic from 'next/dynamic'
+
+const Pagination = dynamic(()=> import('@/components/pagination'))
 
 type Props = {
   posts: PageMeta[]

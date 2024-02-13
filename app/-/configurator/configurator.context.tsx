@@ -1,7 +1,8 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
-import { set } from 'lodash'
+//import { set } from 'lodash'
+import set from 'lodash/set'
 import destr from 'destr'
 
 import { defaultConfig } from './assets/config-schema'
